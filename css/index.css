@@ -130,7 +130,7 @@ html {
   font-size: 62.5%;
 }
 .navbar {
-  background-color: white;
+  background-color: red;
   background-size: cover;
   height: 40px;
   width: 100%;
@@ -139,6 +139,7 @@ html {
   position: fixed;
   top: 0;
   z-index: 2;
+  box-shadow: 0px 5px 6px grey;
 }
 .navbar nav {
   display: inherit;
@@ -147,10 +148,17 @@ html {
   align-items: center;
 }
 .navbar nav a {
+  color: whitesmoke;
   font-weight: 600;
   display: inherit;
   justify-content: space-evenly;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.navbar nav a:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  text-shadow: 0px 0px 10px #000000;
 }
 .container {
   font-size: 1.4rem;
@@ -162,7 +170,7 @@ html {
   width: auto;
   height: auto;
   margin: 0 auto;
-  background-image: url("/imgs/board.jpg");
+  background-image: url("/img/board.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -199,17 +207,41 @@ html {
   overflow: hidden;
   margin: 0;
   position: relative;
+  text-shadow: 2px 2px 8px #000000;
 }
 .banner .banner-intro-text .hidetext {
   color: whitesmoke;
-  padding-top: 130px;
+  top: 135px;
   position: absolute;
   z-index: 1;
   margin: 0;
 }
+.banner .banner-intro-text .hidebutton {
+  margin-top: 10px;
+}
+.banner .banner-intro-text .hidebutton button {
+  top: 0;
+  font-size: 2.5rem;
+  color: whitesmoke;
+  height: 50px;
+  width: 300px;
+  background-color: green;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  text-shadow: 2px 2px 8px #000000;
+}
+.banner .banner-intro-text .hidebutton button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 10px #000000;
+}
 .banner .pizza-banner {
   width: auto;
-  height: 650px;
-  margin-top: -10px;
+  height: 700px;
   z-index: 0;
+}
+.banner .pizza-banner:hover {
+  transform: scale(1.1);
 }
