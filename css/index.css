@@ -130,7 +130,7 @@ html {
   font-size: 62.5%;
 }
 .navbar {
-  background-color: red;
+  background-color: #ff0000;
   background-size: cover;
   height: 40px;
   width: 100%;
@@ -139,7 +139,7 @@ html {
   position: fixed;
   top: 0;
   z-index: 2;
-  box-shadow: 0px 5px 6px grey;
+  box-shadow: 0px 5px 10px black;
 }
 .navbar nav {
   display: inherit;
@@ -148,7 +148,7 @@ html {
   align-items: center;
 }
 .navbar nav a {
-  color: whitesmoke;
+  color: #f5f5f5;
   font-weight: 600;
   display: inherit;
   justify-content: space-evenly;
@@ -159,17 +159,44 @@ html {
   cursor: pointer;
   transform: scale(1.1);
   text-shadow: 0px 0px 10px #000000;
+  text-decoration: underline;
+}
+.bottom-menu {
+  box-shadow: 0px -5px 10px black;
+  height: 40px;
+  background-color: green;
+  top: 95.7vh;
+  position: fixed;
+}
+.bot-nav-tab {
+  color: #f5f5f5;
+  font-weight: 600;
+  display: inherit;
+  justify-content: space-evenly;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.bot-nav-tab:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  text-shadow: 0px 0px 10px #000000;
+  text-decoration: underline;
+}
+.tab-selected {
+  color: red;
+}
+.click-menu {
+  position: sticky;
+  top: 0;
 }
 .container {
   font-size: 1.4rem;
+  line-height: 1.4rem;
   display: flex;
   flex-direction: column;
-  line-height: 2rem;
   font-family: 'Open Sans', sans-serif;
   max-width: 1920px;
   width: auto;
-  height: auto;
-  margin: 0 auto;
   background-image: url("/img/board.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -177,23 +204,38 @@ html {
   background-size: cover;
 }
 .container .content {
-  background-color: white;
-  height: 600px;
-  width: auto;
-  bottom: 0;
-  display: inherit;
-  justify-content: center;
+  background-color: whitesmoke;
 }
 .container .content .body-text {
+  line-height: 2.4rem;
+  margin: 0 auto;
   width: 900px;
+}
+.container .content .body-text h2 {
+  font-size: 7rem;
+  margin-bottom: 20px;
+}
+.info-panel {
+  display: none;
+}
+.info-panel-selected {
+  height: 28.5vh;
+  display: block;
+  z-index: 100;
+  padding: 15px;
 }
 .banner {
   display: flex;
-  height: 550px;
   overflow: hidden;
+  align-items: center;
+  flex-wrap: wrap;
+  max-height: 100vh;
 }
 .banner .banner-intro-text {
-  margin-top: 70px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 5px;
   width: 670px;
 }
@@ -225,7 +267,7 @@ html {
   color: whitesmoke;
   height: 50px;
   width: 300px;
-  background-color: green;
+  background-color: #008000;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 600;
@@ -239,9 +281,12 @@ html {
 }
 .banner .pizza-banner {
   width: auto;
-  height: 700px;
+  height: auto;
   z-index: 0;
 }
-.banner .pizza-banner:hover {
-  transform: scale(1.1);
+.link-clicked {
+  height: 600px;
+}
+.link-clicked .pizza-banner {
+  height: 700px;
 }

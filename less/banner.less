@@ -1,12 +1,18 @@
 .banner {
-    display : flex;
-    height  : 550px;
-    overflow: hidden;
+    display    : flex;
+    overflow   : hidden;
+    align-items: center;
+    flex-wrap  : wrap;
+    max-height : 100vh;
+
 
     .banner-intro-text {
-        margin-top : 70px;
-        margin-left: 5px;
-        width      : 670px;
+        height         : 100%;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        margin-left    : 5px;
+        width          : 670px;
 
         h1 {
             font-family: 'Francois One',
@@ -39,7 +45,7 @@
                 color           : whitesmoke;
                 height          : 50px;
                 width           : 300px;
-                background-color: green;
+                background-color: #008000;
                 border-radius   : 5px;
                 text-transform  : uppercase;
                 font-weight     : 600;
@@ -47,8 +53,8 @@
                 text-shadow     : 2px 2px 8px #000000;
 
                 &:hover {
-                    cursor   : pointer;
-                    transform: scale(1.1);
+                    cursor    : pointer;
+                    transform : scale(1.1);
                     box-shadow: 0px 0px 10px #000000;
                 }
             }
@@ -57,12 +63,18 @@
 
     .pizza-banner {
         width  : auto;
-        height : 700px;
+        height : auto;
         z-index: 0;
-
-        &:hover {
-            transform: scale(1.1);
-        }
     }
 
+}
+
+.link-clicked {
+    height: 600px;
+
+    .pizza-banner {
+        height: 700px;
+    }
+
+    
 }

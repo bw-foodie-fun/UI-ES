@@ -1,21 +1,16 @@
-const dish = document.querySelector('.pizza-banner')
+const signUpButton = document.querySelector('.hidebutton')
+const pizza = document.querySelector('.pizza-banner')
 const headerText = document.querySelector('h1')
-
-TweenMax.fromTo(dish, 2, { x: -600, opacity: 0 }, { x: -101, opacity: 1 })
-
-
 tl = new TimelineMax({})
 
-tl
-    .staggerTo('.hidetext', .75, { y: -90, ease: Power4.easeOut, delay: 2 }, .5);
+tl.fromTo(pizza, 2, { x: -600, opacity: 0 }, { x: -101, opacity: 1 })
+tl.staggerTo('.hidetext', .75, { y: -90, ease: Power4.easeOut }, .5);
 tl.from('.hidebutton', 01, { y: 90, ease: Power4.easeOut });
 
-
-
-dish.addEventListener('mouseover', () => {
-    TweenMax.to(dish, 3, { x: 600, rotation: 360, scale: 3 })
+signUpButton.addEventListener('mouseover', () => {
+    TweenMax.to(pizza, 3, { x: "45%", rotation: 360, scale: 2 })
 })
 
-dish.addEventListener('mouseleave', () => {
-    TweenMax.to(dish, 4, { x: -101, rotation: 0, scale: 1 })
+signUpButton.addEventListener('mouseleave', () => {
+    TweenMax.to(pizza, 4, { x: "-10%", rotation: 0, scale: 1 })
 })
