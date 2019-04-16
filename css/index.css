@@ -168,7 +168,7 @@ html {
   top: 95.7vh;
   position: fixed;
 }
-.bot-nav-tab {
+.nav-link {
   color: #f5f5f5;
   font-weight: 600;
   display: inherit;
@@ -176,7 +176,7 @@ html {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
-.bot-nav-tab:hover {
+.nav-link:hover {
   cursor: pointer;
   transform: scale(1.1);
   text-shadow: 0px 0px 10px #000000;
@@ -208,12 +208,16 @@ html {
 }
 .container .content .body-text {
   line-height: 2.4rem;
-  margin: 0 auto;
-  width: 900px;
+  word-wrap: break-word;
 }
 .container .content .body-text h2 {
   font-size: 7rem;
   margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .container .content .body-text h2 {
+    font-size: 3.5rem;
+  }
 }
 .info-panel {
   display: none;
@@ -221,8 +225,17 @@ html {
 .info-panel-selected {
   height: 28.5vh;
   display: block;
-  z-index: 100;
-  padding: 15px;
+  padding: 2%;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .info-panel-selected {
+    flex-direction: column;
+    height: 50vh;
+    width: 80%;
+  }
 }
 .banner {
   display: flex;
@@ -230,6 +243,11 @@ html {
   align-items: center;
   flex-wrap: wrap;
   max-height: 100vh;
+}
+@media (max-width: 500px) {
+  .banner {
+    height: 100vh;
+  }
 }
 .banner .banner-intro-text {
   height: 100%;
@@ -251,6 +269,11 @@ html {
   position: relative;
   text-shadow: 2px 2px 8px #000000;
 }
+@media (max-width: 500px) {
+  .banner .banner-intro-text .too-tall {
+    font-size: 8rem;
+  }
+}
 .banner .banner-intro-text .hidetext {
   color: whitesmoke;
   top: 135px;
@@ -267,7 +290,7 @@ html {
   color: whitesmoke;
   height: 50px;
   width: 300px;
-  background-color: #008000;
+  background-color: green;
   border-radius: 5px;
   text-transform: uppercase;
   font-weight: 600;
@@ -283,6 +306,11 @@ html {
   width: auto;
   height: auto;
   z-index: 0;
+}
+@media (max-width: 500px) {
+  .banner .pizza-banner {
+    display: none;
+  }
 }
 .link-clicked {
   height: 600px;

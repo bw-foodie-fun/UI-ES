@@ -9,19 +9,20 @@ class PanelSelector {
         this.tabItem = new TabSelector(this.itemElement)
 
         this.element.addEventListener('click', () => {
-            this.select()
+            this.select();
         })
+
     }
 
     select() {
-
-        let links = document.querySelectorAll('.bot-nav-tab')
+        let links = document.querySelectorAll('.nav-link')
 
         let navBar = document.querySelector('.bottom-menu')
 
         let banner = document.querySelector('.banner')
 
         banner.classList.add('link-clicked');
+
         navBar.classList.add('click-menu');
 
         links.forEach(link => {
@@ -37,7 +38,6 @@ class PanelSelector {
 class TabSelector {
     constructor(element) {
         this.element = element
-        console.log(this.element)
     }
 
     select() {
@@ -52,7 +52,7 @@ class TabSelector {
 
 }
 
-const infoPanels = document.querySelectorAll('.bot-nav-tab')
+const infoPanels = document.querySelectorAll('.nav-link')
 
 infoPanels.forEach(panel => {
     new PanelSelector(panel)

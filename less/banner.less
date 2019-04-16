@@ -5,6 +5,9 @@
     flex-wrap  : wrap;
     max-height : 100vh;
 
+    @media (max-width: 500px) {
+        height: 100vh;
+    }
 
     .banner-intro-text {
         height         : 100%;
@@ -26,6 +29,13 @@
             margin         : 0;
             position       : relative;
             text-shadow    : 2px 2px 8px #000000;
+
+        }
+
+        @media (max-width: 500px) {
+            .too-tall {
+                font-size: 8rem;
+            }
         }
 
         .hidetext {
@@ -45,7 +55,7 @@
                 color           : whitesmoke;
                 height          : 50px;
                 width           : 300px;
-                background-color: #008000;
+                background-color: green;
                 border-radius   : 5px;
                 text-transform  : uppercase;
                 font-weight     : 600;
@@ -65,6 +75,10 @@
         width  : auto;
         height : auto;
         z-index: 0;
+
+        @media (max-width: 500px) {
+            display: none;
+        }
     }
 
 }
@@ -75,6 +89,4 @@
     .pizza-banner {
         height: 700px;
     }
-
-    
 }
