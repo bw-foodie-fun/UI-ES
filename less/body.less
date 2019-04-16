@@ -17,22 +17,51 @@
     .content {
         background-color: whitesmoke;
 
-        .body-text {
-            line-height: 2.4rem;
+    }
+}
 
-            word-wrap: break-word;
 
-            h2 {
-                font-size    : 7rem;
-                margin-bottom: 20px;
+.body-text {
+    line-height: 2.4rem;
 
-                @media (max-width: 500px) {
-                    font-size: 3.5rem;
-                }
+    word-wrap: break-word;
+
+    .team-section {
+        display        : flex;
+        flex-wrap      : wrap;
+        justify-content: space-evenly;
+        font-weight    : 600;
+
+        .team-member {
+            margin       : 0 4px;
+            border-radius: 50%;
+            margin-top   : 5px;
+            width        : 200px;
+            height       : 200px;
+            border       : 5px solid green;
+            transition   : all .2s ease-in-out;
+
+            &:hover {
+                border          : 5px solid red;
+                transform       : scale(1.1);
+                opacity         : 0.4;
+                background-image: url(/img/github.png);
+
             }
         }
     }
+
+    h2 {
+        font-size    : 7rem;
+        margin-bottom: 20px;
+
+        @media (max-width: 500px) {
+            font-size: 3.5rem;
+        }
+    }
 }
+
+
 
 .info-panel {
     display: none;
@@ -40,7 +69,7 @@
 
 
 .info-panel-selected {
-    height    : 28.5vh;
+    height    : auto;
     display   : block;
     padding   : 2%;
     text-align: center;
@@ -48,8 +77,9 @@
     margin    : 0 auto;
 
     @media (max-width: 500px) {
+        display       : flex;
         flex-direction: column;
-        height        : 50vh;
+        height        : auto;
         width         : 80%;
     }
 }
