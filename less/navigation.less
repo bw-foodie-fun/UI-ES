@@ -2,20 +2,28 @@
     background-color: #ff0000;
     background-size : cover;
     height          : 40px;
-    width           : 100%;
+    width           : 98%;
     display         : flex;
     justify-content : center;
     position        : fixed;
-    top             : 0;
+    top             : 1%;
+    left            : 1%;
+    right           : 1%;
     z-index         : 2;
     box-shadow      : 0px 5px 10px black;
+
+    .logo {
+        width : 7%;
+        height: auto;
+    }
 
 
     nav {
         display        : inherit;
-        justify-content: space-around;
+        justify-content: space-evenly;
         width          : 800px;
         align-items    : center;
+
 
         a {
             color          : #f5f5f5;
@@ -32,7 +40,6 @@
                 text-shadow    : 0px 0px 10px #000000;
                 text-decoration: underline;
             }
-
         }
     }
 }
@@ -41,8 +48,9 @@
     box-shadow      : 0px -5px 10px black;
     height          : 40px;
     background-color: green;
-    top             : 95.7vh;
+    top             : 94.7vh;
     position        : fixed;
+
 }
 
 .nav-link {

@@ -133,17 +133,23 @@ html {
   background-color: #ff0000;
   background-size: cover;
   height: 40px;
-  width: 100%;
+  width: 98%;
   display: flex;
   justify-content: center;
   position: fixed;
-  top: 0;
+  top: 1%;
+  left: 1%;
+  right: 1%;
   z-index: 2;
   box-shadow: 0px 5px 10px black;
 }
+.navbar .logo {
+  width: 7%;
+  height: auto;
+}
 .navbar nav {
   display: inherit;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 800px;
   align-items: center;
 }
@@ -165,7 +171,7 @@ html {
   box-shadow: 0px -5px 10px black;
   height: 40px;
   background-color: green;
-  top: 95.7vh;
+  top: 94.7vh;
   position: fixed;
 }
 .nav-link {
@@ -196,7 +202,7 @@ html {
   flex-direction: column;
   font-family: 'Open Sans', sans-serif;
   max-width: 1920px;
-  width: auto;
+  width: 100%;
   background-image: url("/img/board.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -204,13 +210,36 @@ html {
   background-size: cover;
 }
 .container .content {
+  width: 98%;
   background-color: whitesmoke;
+  margin: 0 auto;
+  margin-bottom: 1%;
 }
 .body-text {
   line-height: 2.4rem;
   word-wrap: break-word;
 }
+.body-text h2 {
+  font-family: 'Francois One', sans-serif;
+  line-height: 4rem;
+}
+.body-text h3 {
+  font-family: 'Francois One', sans-serif;
+  font-size: 3rem;
+  margin-top: 1%;
+}
+.body-text p {
+  margin: 2% auto;
+  width: 40%;
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .body-text p {
+    width: 80%;
+  }
+}
 .body-text .team-section {
+  margin-top: 2%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -229,7 +258,7 @@ html {
   border: 5px solid red;
   transform: scale(1.1);
   opacity: 0.4;
-  background-image: url(/img/github.png);
+  box-shadow: 0px 0px 50px black;
 }
 .body-text h2 {
   font-size: 7rem;
@@ -244,7 +273,7 @@ html {
   display: none;
 }
 .info-panel-selected {
-  height: auto;
+  height: fit-content;
   display: block;
   padding: 2%;
   text-align: center;
@@ -255,7 +284,7 @@ html {
   .info-panel-selected {
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: fit-content;
     width: 80%;
   }
 }
@@ -264,7 +293,7 @@ html {
   overflow: hidden;
   align-items: center;
   flex-wrap: wrap;
-  max-height: 100vh;
+  max-height: 98vh;
 }
 @media (max-width: 500px) {
   .banner {

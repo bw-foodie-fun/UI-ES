@@ -1,5 +1,6 @@
 class PanelSelector {
     constructor(element) {
+
         this.element = element
 
         this.data = this.element.dataset.info
@@ -38,6 +39,8 @@ class PanelSelector {
 class TabSelector {
     constructor(element) {
         this.element = element
+
+
     }
 
     select() {
@@ -47,7 +50,9 @@ class TabSelector {
             panel.classList.remove('info-panel-selected')
         })
 
+
         this.element.classList.add('info-panel-selected')
+
     }
 
 }

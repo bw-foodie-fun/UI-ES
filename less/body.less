@@ -6,7 +6,7 @@
     font-family   : 'Open Sans',
         sans-serif;
     max-width            : 1920px;
-    width                : auto;
+    width                : 100%;
     background-image     : url("/img/board.jpg");
     background-position  : center center;
     background-repeat    : no-repeat;
@@ -15,18 +15,43 @@
 
 
     .content {
+        width           : 98%;
         background-color: whitesmoke;
-
+        margin          : 0 auto;
+        margin-bottom   : 1%;
     }
 }
 
-
 .body-text {
     line-height: 2.4rem;
+    word-wrap  : break-word;
 
-    word-wrap: break-word;
+    h2 {
+        font-family: 'Francois One',
+            sans-serif;
+        line-height: 4rem;
+    }
+
+    h3 {
+        font-family: 'Francois One',
+            sans-serif;
+        font-size : 3rem;
+        margin-top: 1%;
+    }
+
+    p {
+        margin   : 2% auto;
+        width    : 40%;
+        font-size: 1.6rem;
+
+        @media (max-width: 500px) {
+
+            width: 80%;
+        }
+    }
 
     .team-section {
+        margin-top     : 2%;
         display        : flex;
         flex-wrap      : wrap;
         justify-content: space-evenly;
@@ -42,11 +67,10 @@
             transition   : all .2s ease-in-out;
 
             &:hover {
-                border          : 5px solid red;
-                transform       : scale(1.1);
-                opacity         : 0.4;
-                background-image: url(/img/github.png);
-
+                border    : 5px solid red;
+                transform : scale(1.1);
+                opacity   : 0.4;
+                box-shadow: 0px 0px 50px black;
             }
         }
     }
@@ -61,15 +85,12 @@
     }
 }
 
-
-
 .info-panel {
     display: none;
 }
 
-
 .info-panel-selected {
-    height    : auto;
+    height    : fit-content;
     display   : block;
     padding   : 2%;
     text-align: center;
@@ -79,7 +100,7 @@
     @media (max-width: 500px) {
         display       : flex;
         flex-direction: column;
-        height        : auto;
+        height        : fit-content;
         width         : 80%;
     }
 }
