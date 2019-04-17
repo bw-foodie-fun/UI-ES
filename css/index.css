@@ -171,7 +171,7 @@ html {
   box-shadow: 0px -5px 10px black;
   height: 40px;
   background-color: green;
-  top: 94.7vh;
+  top: 94.7%;
   position: fixed;
 }
 .nav-link {
@@ -214,10 +214,11 @@ html {
   background-color: whitesmoke;
   margin: 0 auto;
   margin-bottom: 1%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .body-text {
   line-height: 2.4rem;
-  word-wrap: break-word;
 }
 .body-text h2 {
   font-family: 'Francois One', sans-serif;
@@ -258,7 +259,7 @@ html {
   border: 5px solid red;
   transform: scale(1.1);
   opacity: 0.4;
-  box-shadow: 0px 0px 50px black;
+  box-shadow: 0px 0px 20px black;
 }
 .body-text h2 {
   font-size: 7rem;
@@ -290,14 +291,14 @@ html {
 }
 .banner {
   display: flex;
-  overflow: hidden;
+  overflow: visible;
   align-items: center;
   flex-wrap: wrap;
-  max-height: 98vh;
+  max-height: 98%;
 }
 @media (max-width: 500px) {
   .banner {
-    height: 100vh;
+    height: 100%;
   }
 }
 .banner .banner-intro-text {
@@ -355,8 +356,9 @@ html {
 }
 .banner .pizza-banner {
   width: auto;
+  max-height: 918px;
   height: auto;
-  z-index: 0;
+  z-index: -1;
 }
 @media (max-width: 500px) {
   .banner .pizza-banner {
@@ -364,8 +366,9 @@ html {
   }
 }
 .link-clicked {
-  height: 600px;
+  max-height: 700px;
+  height: 20%;
 }
 .link-clicked .pizza-banner {
-  height: 700px;
+  height: 120%;
 }

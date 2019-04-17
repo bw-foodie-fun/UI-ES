@@ -1,12 +1,12 @@
 .banner {
     display    : flex;
-    overflow   : hidden;
+    overflow   : visible;
     align-items: center;
     flex-wrap  : wrap;
-    max-height : 98vh;
+    max-height : 98%;
 
     @media (max-width: 500px) {
-        height: 100vh;
+        height: 100%;
     }
 
     .banner-intro-text {
@@ -73,8 +73,9 @@
 
     .pizza-banner {
         width  : auto;
-        height : auto;
-        z-index: 0;
+        max-height : 918px;
+        height: auto;
+        z-index: -1;
 
         @media (max-width: 500px) {
             display: none;
@@ -84,9 +85,10 @@
 }
 
 .link-clicked {
-    height: 600px;
+    max-height: 700px;
+    height: 20%;
 
     .pizza-banner {
-        height: 700px;
+        height: 120%;
     }
 }
