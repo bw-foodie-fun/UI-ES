@@ -309,6 +309,11 @@ html {
   margin-left: 5px;
   width: 670px;
 }
+@media (max-width: 500px) {
+  .banner .banner-intro-text {
+    margin-top: 20%;
+  }
+}
 .banner .banner-intro-text h1 {
   font-family: 'Francois One', sans-serif;
   display: flex;
@@ -322,8 +327,13 @@ html {
   text-shadow: 2px 2px 8px #000000;
 }
 @media (max-width: 500px) {
+  .banner .banner-intro-text h1 {
+    font-size: 9rem;
+  }
+}
+@media (max-width: 500px) {
   .banner .banner-intro-text .too-tall {
-    font-size: 8rem;
+    font-size: 7rem;
   }
 }
 .banner .banner-intro-text .hidetext {
