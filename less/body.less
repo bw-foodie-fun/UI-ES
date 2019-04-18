@@ -14,16 +14,17 @@
     background-size      : cover;
 
     .content {
-        width           : 98%;
-        background-color: whitesmoke;
-        margin          : 0 auto;
-        margin-bottom   : 1%;
-        border-bottom-left-radius: 20px;
+        width                     : 98%;
+        background-color          : whitesmoke;
+        margin                    : 0 auto;
+        margin-bottom             : 1%;
+        border-bottom-left-radius : 20px;
         border-bottom-right-radius: 20px;
     }
 }
 
 .body-text {
+    display: block;
     line-height: 2.4rem;
 
     h2 {
@@ -40,7 +41,7 @@
     }
 
     p {
-        margin   : 2% auto;
+        margin: 0 auto;
         width    : 40%;
         font-size: 1.6rem;
 
@@ -91,16 +92,29 @@
 
 .info-panel-selected {
     height    : fit-content;
-    display   : block;
+    display   : flex;
+    flex-direction: column;
+    flex-wrap : wrap;
     padding   : 2%;
     text-align: center;
-    width     : 60%;
+    width     : 80%;
     margin    : 0 auto;
+
+    img {
+        width : 30%;
+        height: auto;
+         margin: 1% 0;
+    }
 
     @media (max-width: 500px) {
         display       : flex;
         flex-direction: column;
         height        : fit-content;
         width         : 80%;
+
+        img {
+            width : 100%;
+            height: auto;
+        }
     }
 }

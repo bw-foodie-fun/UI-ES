@@ -11,7 +11,7 @@ tl.from('.hidebutton', 01, { y: 90, ease: Power4.easeOut });
 
 
 signUpButton.addEventListener('mouseover', () => {
-    TweenMax.to(pizza, 3, { x: "45%", rotation: 360, scale: 2 })
+    TweenMax.to(pizza, 3, { x: "45%", rotation: 360, scale: 2})
 })
 
 signUpButton.addEventListener('mouseleave', () => {

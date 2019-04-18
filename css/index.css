@@ -218,6 +218,7 @@ html {
   border-bottom-right-radius: 20px;
 }
 .body-text {
+  display: block;
   line-height: 2.4rem;
 }
 .body-text h2 {
@@ -230,7 +231,7 @@ html {
   margin-top: 1%;
 }
 .body-text p {
-  margin: 2% auto;
+  margin: 0 auto;
   width: 40%;
   font-size: 1.6rem;
 }
@@ -275,11 +276,18 @@ html {
 }
 .info-panel-selected {
   height: fit-content;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 2%;
   text-align: center;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
+}
+.info-panel-selected img {
+  width: 30%;
+  height: auto;
+  margin: 1% 0;
 }
 @media (max-width: 500px) {
   .info-panel-selected {
@@ -288,10 +296,14 @@ html {
     height: fit-content;
     width: 80%;
   }
+  .info-panel-selected img {
+    width: 100%;
+    height: auto;
+  }
 }
 .banner {
   display: flex;
-  overflow: visible;
+  overflow: hidden;
   align-items: center;
   flex-wrap: wrap;
   max-height: 98%;
@@ -376,6 +388,7 @@ html {
   }
 }
 .link-clicked {
+  overflow: visible;
   max-height: 700px;
   height: 20%;
 }
